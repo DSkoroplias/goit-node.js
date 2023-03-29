@@ -1,6 +1,6 @@
 const { program } = require("commander");
 
-const contacts = require("./db/contacts");
+const contacts = require("./db");
 
 // TODO: рефакторить
 const invokeAction = async ({ action, id, name, email, phone }) => {
