@@ -38,7 +38,7 @@ const removeContact = async (id) => {
   }
 };
 
-const addContact = async ({ name, email, phone }) => {
+const add = async ({ name, email, phone }) => {
   try {
     const contacts = await listContacts();
     const newContact = {
@@ -72,6 +72,6 @@ module.exports = {
   listContacts,
   getContactById,
   removeContact,
-  addContact,
+  add,
   updateContact,
 };
