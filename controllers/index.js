@@ -1,9 +1,13 @@
-const { getAllContacts } = require("./contacts/getAllContacts");
-const { addContact } = require("./contacts/addContact");
-const { getContactsById } = require("./contacts/getContactsById");
-const { deleteContact } = require("./contacts/deleteContact");
-const { updateContactById } = require("./contacts/updateContactById");
-const { updateStatusContact } = require("./contacts/updateStatusContact");
+const { getAllContacts } = require("./contacts");
+const { addContact } = require("./contacts");
+const { getContactsById } = require("./contacts");
+const { deleteContact } = require("./contacts");
+const { updateContactById } = require("./contacts");
+const { updateStatusContact } = require("./contacts");
+const { register } = require("./auth");
+const { login } = require("./auth");
+const { getCurrent } = require("./auth");
+const { logout } = require("./auth");
 
 module.exports = {
   getAllContacts,
@@ -12,4 +16,8 @@ module.exports = {
   deleteContact,
   updateContactById,
   updateStatusContact,
+  register,
+  login,
+  getCurrent,
+  logout,
 };
