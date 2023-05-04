@@ -18,6 +18,13 @@ router.post(
   ctrl.register
 );
 
+router.get("/verify/:verificationCode", ctrl.verify);
+router.post(
+  "/resend-verify-email",
+  validateBody(schemasUser.emailSchema),
+  ctrl.resendVerifyEmail
+);
+
 // signin
 
 router.post("/login", validateBody(schemasUser.loginSchema), ctrl.login);
